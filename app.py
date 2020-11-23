@@ -62,10 +62,8 @@ def nltk_summarizer(raw_text):
 @app.route('/')
 def home():
 	if not session.get('logged_in'):
-
 		return render_template('login.html')
 	else:
-
 		return render_template('index.html')
 
 @app.route('/login', methods=['POST'])
@@ -81,7 +79,7 @@ def analyze():
     if request.method == 'POST':
     	rawtext = request.form['rawtext']
         if request.form['algorithm'] == 'Sumy':
-            final_summary = sumy_summary(rawtext)
+        	final_summary = sumy_summary(rawtext)
 			return render_template('index.html',ctext=rawtext,final_summary=final_summary)
         else request.form['algorithm'] == 'NLTK':
         	final_summary = nltk_summarizer(rawtext)
