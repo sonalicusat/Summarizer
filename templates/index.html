@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link 
     href="http://fonts.googleapis.com/css?family=Poppins"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="./style.css" />
+    rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
 </head>
   <br><br>
 <h1 style="color:black">Summarizer</h1>
@@ -41,6 +40,7 @@ input {
 
 <body>
 <nav>
+     <form method="POST" action="#">
       <div class="dropdown">
         <button><a href="#" class="home">Home</a></button>
         <div class="algorithm">
@@ -51,23 +51,18 @@ input {
           </ul>
         </div>
       </div>
+     </form>
     </nav>
  </body>
   <br><br>
-
-
-
-  </select>
+</select>
 
 <br><br><br><br>
            <form method="POST" action="#">
    <label for="summary"><h1 style="color:black">Judgement:</h1></label>
 <textarea id="summary" name="summary" rows="10" cols="100">
-  
-  </textarea>
-          
-        
-  <br><br>
+</textarea>
+<br><br>
   <input type="submit" value="Submit">
   </form>
   <br><br><br><br><br><br>
@@ -76,14 +71,8 @@ input {
               <p class="light">{{ final_summary }}</p>
           
           </div>
-
-
-
-
-  <br><br>
- 
-
-<style>
+<br><br>
+ <style>
 body {
   background-image: url('law.jpg');
   background-repeat: no-repeat;
@@ -91,9 +80,6 @@ body {
   background-size: 100% 100%;
 }
 </style>
-
 <body>
-
-
 </body>
 </html>
